@@ -1,0 +1,12 @@
+<div class="container">
+  <app-title></app-title>
+  <ng-container *ngIf="showInfoAndStatuses | async">
+    <app-information></app-information>
+    <app-statuses></app-statuses>
+  </ng-container>
+  <app-actions-toolbar *ngIf="showActionsToolbar | async"></app-actions-toolbar>
+  <app-user-control></app-user-control>
+
+  <app-small-settings-panel *ngIf="showSmallSettingsPanel | async"></app-small-settings-panel>
+  <app-large-settings-panel *ngIf="showLargeSettingsPanel | async"></app-large-settings-panel>
+</div>

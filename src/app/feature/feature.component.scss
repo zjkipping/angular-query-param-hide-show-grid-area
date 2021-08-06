@@ -1,0 +1,76 @@
+.container {
+  display: grid;
+  grid-template-areas:
+    'title title'
+    'information settings'
+    'toolbar settings'
+    'user-control settings';
+  grid-template-rows: max-content minmax(0, max-content) minmax(0, max-content) 1fr;
+  grid-template-columns: 1fr minmax(0, max-content);
+
+  height: 100%;
+  width: 100%;
+}
+
+app-title {
+  grid-area: title;
+  height: 60px;
+
+  display: grid;
+  place-items: center;
+  background: teal;
+}
+
+app-information {
+  grid-area: information;
+  height: 60px;
+
+  display: grid;
+  place-items: center;
+  background: rgb(182, 182, 97);
+}
+
+app-statuses {
+  grid-area: toolbar;
+  height: 120px;
+
+  display: grid;
+  place-items: center;
+  background: rgb(187, 131, 59);
+}
+
+app-actions-toolbar {
+  grid-area: toolbar;
+  height: 60px;
+
+  display: grid;
+  place-items: center;
+  background: rgb(62, 138, 79);
+}
+
+app-user-control {
+  grid-area: user-control;
+  height: 100%;
+
+  display: grid;
+  place-items: center;
+  background: rgb(130, 70, 148);
+}
+
+app-small-settings-panel,
+app-large-settings-panel {
+  grid-area: settings;
+
+  display: grid;
+  place-items: center;
+}
+
+app-small-settings-panel {
+  background: rgb(206, 117, 107);
+  width: 300px;
+}
+
+app-large-settings-panel {
+  background: rgb(201, 47, 30);
+  width: 500px;
+}
